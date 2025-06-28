@@ -1,0 +1,16 @@
+apps:
+  - script: ./backend/app.js
+    name: 'backend-server'
+    watch:
+      - 'backend'
+      - 'db'
+      - 'services'
+      - 'mail'
+    env:
+      NODE_ENV: development
+    env_production:
+      NODE_ENV: production
+      watch: false
+    env_staging:
+      NODE_ENV: staging
+      watch: false
